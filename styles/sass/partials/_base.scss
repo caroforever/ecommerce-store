@@ -80,6 +80,7 @@ button {
 
 // this is an ANCHOR TAG with a class of BUTTON... style it like this!
 a {
+    display: inline-block;
     &.button {
         color: $primary;
         background-color: transparent;
@@ -101,4 +102,11 @@ a {
             color: $solidWhite;
         }
     }
+}
+// this ensures that image elements obey the dimensions of their parents. 
+// this indicates that we want the images to be the width of its parent. it allows the images to sit aligned 3 in a row on the shop page (along with the flex-basis of calc 100% / 3
+img {
+    // NOTE: this may need to be overwritten in further partials to be a width property (if image is not stretching to take up available space within the parent container)
+    max-width: 100%;
+    display: block;
 }

@@ -40,7 +40,8 @@
         </div> <!-- .wrapper END -->
     </nav> <!-- .navBar END -->
 
-    <main id="productsMainContent">
+    <!-- it's okay to use the same value for productsMainContent because id is for the skip link, class is for styling -->
+    <main id="productsMainContent" class="productsMainContent">
         <section class="allProducts">
             <div class="wrapper"> 
                 <h2>All Products</h2>
@@ -48,6 +49,8 @@
                     <li>
                         <a href="">
                             <img src="./assets/safari-trio.jpg" alt="Hand-carved safari animal toys">
+                            <!-- PLSFIXTHIS: popularProduct <p> should perhaps be updated to be an h3 -->
+                                <!--  if element remains a <p> tag, use a strong tag to create emphasis for semantic purposes-->
                             <p class="popularProduct">Safari Trio</p>
                             <p class="price">$49.00USD</p>
                         </a>
@@ -153,9 +156,6 @@
                 </ul>
             </div>
         </section>
-
-
-
     </main>
 
 
