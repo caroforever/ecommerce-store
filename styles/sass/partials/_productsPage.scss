@@ -47,3 +47,56 @@
     }
 }
 
+.guarantees {
+    background-color: $quaternary;
+    position: relative;
+
+    h2 {
+        font-size: 0.8rem;
+    }
+
+    h3 {
+        font-size: 0.6rem;
+        margin: 0;
+    }
+
+    p {
+        font-size: 0.5rem;
+        line-height: 1rem;
+    }
+
+
+
+    // the before element allows the svg to take the width of and *just above* the .guarantees section!!!
+    &::before {
+        content: "";
+        // be mindful of sass's file structure. the autocomplete will state that you need to do ../../ but sass doesn't recognize your file structure. it's actually just one level up from the .css folder, not the .scss folder.
+        background-image: url(../assets/wave-3.svg);
+        background-color: $quaternary;
+        background-position: top center;
+        background-size: 1500px 60px;
+        // this background size creates a lower wave (so that it doesn't look like a comb.)
+        background-repeat: repeat-x;
+        position: absolute;
+        height: 3rem;
+        left: 0;
+        right: 0;
+        // using left: 0; and right: 0; is another way of having width
+        top: -60px;
+        // adding the top property moves the squiggly line upwards.
+    }
+
+    ul {
+        display: flex; 
+        li {
+            margin: 0 20px;
+            width: calc(25% - 40px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+}
+
